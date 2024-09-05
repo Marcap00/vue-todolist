@@ -5,25 +5,30 @@
 
 
 /* Icons */
-li>i.fa-trash {
+.icons>i {
     display: none;
     cursor: pointer;
+    color: rgb(138, 138, 138);
 }
 
-li:hover>i.fa-trash {
+li:hover .icons>i {
     display: inline;
 }
 
-li>i.fa-trash:hover {
-    color: red;
+.icons>#trash.fa-trash {
+    border: 2px solid rgb(222, 226, 230);
 }
 
+.icons>#trash.fa-trash:hover {
+    color: red;
+    border-color: red;
+}
+
+/* # List Item */
 .list-group-item {
     display: flex;
 }
 
-
-/* # List Item */
 #list-items li.list-group-item span {
     cursor: pointer;
 }

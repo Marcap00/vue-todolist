@@ -48,7 +48,7 @@
                         <li v-for="(item, i) in todoItems"
                             class="d-flex justify-content-between align-items-center list-group-item border-0">
                             <!-- Testo dell'item -->
-                            <div>
+                            <div class="text-item">
                                 <!-- Icona del diamante -->
                                 <i class="fa-solid fa-diamond fa-xs me-2"></i>
                                 <span @click="toggleDone(i)"
@@ -56,8 +56,12 @@
                                     {{ item.title }}
                                 </span>
                             </div>
-                            <!-- Icona del cestino la quale reagisce al click richiamando il metodo che rimuove l'item -->
-                            <i @click="removeItem(i)" class="fas fa-trash"></i>
+                            <div class="icons">
+                                <i @click="toggleDone(i)" :class="{'text-success border-success': item.done}"
+                                    class="fas fa-check mx-2 border border-2 rounded-3 p-1"></i>
+                                <!-- Icona del cestino la quale reagisce al click richiamando il metodo che rimuove l'item -->
+                                <i @click="removeItem(i)" id="trash" class="fas fa-trash mx-2  rounded-3 p-1"></i>
+                            </div>
                         </li>
                         <li class="row list-group-item border-0">
                             <div class="col-6">
@@ -69,6 +73,7 @@
                                 </div>
                             </div>
                             <div class="col-3">
+
                                 <button @click="addElement()" class="btn btn-dark h-100 py-2 px-5 fs-5">Add</button>
                             </div>
                         </li>
