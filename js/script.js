@@ -17,6 +17,7 @@ Bonus:
 const { createApp } = Vue;
 
 createApp({
+    // Inizializzazione dei dati
     data() {
         return {
             // Array di oggetti degli elementi della to do list
@@ -34,6 +35,7 @@ createApp({
             newTodoItem: "",
         }
     },
+    // Metodi 
     methods: {
         // Metodo per rimuovere un elemento dalla to do list (ricevendo come parametro l'indice dell'elemento)
         removeItem(i) {
@@ -48,6 +50,11 @@ createApp({
             this.todoItems.push({ title: this.newTodoItem, done: false });
             // Resetto il campo di input
             this.newTodoItem = '';
+        },
+        // Metodo per cambiare la proprietà done dell'elemento (done: true/false)
+        toggleDone(i) {
+            // Cambio la proprietà dell'elemento
+            this.todoItems[i].done = !this.todoItems[i].done;
         }
     },
 }).mount('#app');

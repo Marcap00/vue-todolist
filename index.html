@@ -36,7 +36,7 @@
                 <!-- Card -->
                 <div class=" shadow card p-3">
                     <!-- Todo List -->
-                    <ul class="list-group list-group-flush">
+                    <ul id="list-items" class="list-group list-group-flush">
                         <!-- Title Todo List -->
                         <li class="list-group-item border-0 d-flex align-items-center gap-3">
                             <!-- Icon -->
@@ -51,7 +51,8 @@
                             <div>
                                 <!-- Icona del diamante -->
                                 <i class="fa-solid fa-diamond fa-xs me-2"></i>
-                                <span :class="{'text-success text-decoration-line-through': item.done}">
+                                <span @click="toggleDone(i)"
+                                    :class="{'text-success text-decoration-line-through': item.done}">
                                     {{ item.title }}
                                 </span>
                             </div>

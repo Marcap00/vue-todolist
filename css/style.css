@@ -21,3 +21,9 @@ li>i.fa-trash:hover {
 .list-group-item {
     display: flex;
 }
+
+
+/* # List Item */
+#list-items li.list-group-item span {
+    cursor: pointer;
+}
