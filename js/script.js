@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            // Array di oggetti degli elementi della to do list
             todoItems: [
                 { title: 'Completare esercizi JS', done: false },
                 { title: 'Completare esercizi Vue', done: true },
