@@ -1,0 +1,19 @@
+/* # General */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Icons */
+li>i.fas {
+    display: none;
+    cursor: pointer;
+}
+
+li:hover>i.fas {
+    display: inline;
+}
+
+li>i.fas:hover {
+    color: red;
+}
