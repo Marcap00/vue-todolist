@@ -58,12 +58,24 @@
                             <!-- Icona del cestino la quale reagisce al click richiamando il metodo che rimuove l'item -->
                             <i @click="removeItem(i)" class="fas fa-trash"></i>
                         </li>
+                        <li class="row list-group-item border-0">
+                            <div class="col-6">
+                                <!-- Input per aggiungere un nuovo item -->
+                                <div class="form-floating  mb-0">
+                                    <input v-model="newTodoItem" @keyup.enter="addElement()" type="Text"
+                                        class="form-control" id="floatingInput" placeholder="+ New Item" required>
+                                    <label for="floatingInput">+ New Item</label>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <button @click="addElement()" class="btn btn-dark h-100 py-2 px-5 fs-5">Add</button>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </main>
     </div>
-
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
