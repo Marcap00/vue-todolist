@@ -5,15 +5,15 @@
 
 
 /* Icons */
-li>i.fas {
+li>i.fa-trash {
     display: none;
     cursor: pointer;
 }
 
-li:hover>i.fas {
+li:hover>i.fa-trash {
     display: inline;
 }
 
-li>i.fas:hover {
+li>i.fa-trash:hover {
     color: red;
 }
