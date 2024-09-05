@@ -15,5 +15,11 @@ createApp({
                 { title: 'Aggiungere una pagina alle note personali', done: false }
             ]
         }
-    }
+    },
+    methods: {
+        // Metodo per rimuovere un elemento dalla to do list (ricevendo come parametro l'indice dell'elemento)
+        removeItem(i) {
+            this.todoItems.splice(i, 1);
+        }
+    },
 }).mount('#app');

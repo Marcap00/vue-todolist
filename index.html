@@ -31,24 +31,32 @@
             <h1 class="fw-semibold mb-0">To Do List</h1>
         </header>
         <main class="py-5">
+            <!-- Container -->
             <div class="container">
+                <!-- Card -->
                 <div class=" shadow card p-3">
+                    <!-- Todo List -->
                     <ul class="list-group list-group-flush">
+                        <!-- Title Todo List -->
                         <li class="list-group-item border-0 d-flex align-items-center gap-3">
+                            <!-- Icon -->
                             <i class="fas fa-tag fa-2xl"></i>
+                            <!-- Title -->
                             <h2 class="mb-0 fw-semibold">Cosa vuoi fare oggi?</h2>
                         </li>
                         <!-- Generiamo dei todo items quanti sono gli items dell'array  -->
-                        <li v-for="item in todoItems"
+                        <li v-for="(item, i) in todoItems"
                             class="d-flex justify-content-between align-items-center list-group-item border-0">
+                            <!-- Testo dell'item -->
                             <div>
+                                <!-- Icona del diamante -->
                                 <i class="fa-solid fa-diamond fa-xs me-2"></i>
                                 <span :class="{'text-success text-decoration-line-through': item.done}">
                                     {{ item.title }}
                                 </span>
                             </div>
-                            <!-- Icona del cestino -->
-                            <i class="fas fa-trash"></i>
+                            <!-- Icona del cestino la quale reagisce al click richiamando il metodo che rimuove l'item -->
+                            <i @click="removeItem(i)" class="fas fa-trash"></i>
                         </li>
                     </ul>
                 </div>
